@@ -2,14 +2,8 @@
 
 public static class Constants
 {
-
-#if DEBUG
-
-
-#elif TEST
-
-#elif RELEASE
-
-
-#endif
+    public static string LocalhostUrl = DeviceInfo.Platform == DevicePlatform.Android ? "10.0.2.2" : "localhost";
+    public static string Scheme = "http"; // or https
+    public static string Port = "5000";
+    public static string RestUrl = $"{Scheme}://{LocalhostUrl}:{Port}/api/todoitems";
 }
