@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using MauiStart.Models.Services;
+﻿using MauiStart.Models.Services;
 using MauiStart.Models.Services.Implementations;
 using MauiStart.Models.Services.Interfaces;
 using MauiStart.Pages;
@@ -19,7 +18,7 @@ public partial class App
         var navigationService = ServiceHelper.GetService<INavigationService>();
 
         // App is starting here...
-        Task.Run(async () => { await navigationService.NavigateToAsync<MainViewModel>(); }).Wait();
+        Task.Run(async () => { await navigationService!.NavigateBackToHome(); }).Wait();
     }
 
     private static void ConfigurationNavigations()
